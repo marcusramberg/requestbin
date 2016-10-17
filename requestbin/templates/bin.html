@@ -130,6 +130,14 @@ public class RequestBinTutorial {
     echo $result;
 ?&gt;</pre>
 
+          
+      <h5>Perl (With <a href="http://mojolicious.org/">mojolicious</a>)</h5>
+      <pre class="prettyprint">
+      my $ua=Mojo::UserAgent->new;
+      my $tx=$ua->post('http://{{host}}/{{bin.name}}',{ts=>time});
+      if (my $res = $tx->success) { say $res->body }
+</pre>
+
         </div>
       </div>
 
